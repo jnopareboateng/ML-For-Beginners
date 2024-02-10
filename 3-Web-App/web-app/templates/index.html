@@ -18,7 +18,7 @@
           country is likely to have reported seeing a UFO?
         </p>
 
-        <form action="{{ url_for('predict')}}" method="post">
+        <form action="{{ url_for('predict')}}" method="post" class="form">
           <input
             type="number"
             name="seconds"
@@ -27,21 +27,21 @@
             min="0"
             max="60"
           />
+          <br />
           <input
             type="text"
             name="latitude"
             placeholder="Latitude"
             required="required"
           />
+          <br />
           <input
             type="text"
             name="longitude"
             placeholder="Longitude"
             required="required"
-          />
-          <button type="submit" class="btn">
-            Predict country where the UFO is seen
-          </button>
+          /><br />
+          <button type="submit" class="btn">Predict</button>
         </form>
 
         <p>{{ prediction_text }}</p>
